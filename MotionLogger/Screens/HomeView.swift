@@ -13,7 +13,7 @@ struct HomeView: View {
     let filter = ["なし", "移動平均", "ローパス"]
     var body: some View {
         ZStack {
-            Color("Background")
+            Color("background")
                 .ignoresSafeArea()
 
             VStack(spacing: 24) {
@@ -30,17 +30,17 @@ struct HomeView: View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: 25, height: 35)
-                            .foregroundColor(Color("Button"))
+                            .foregroundColor(Color("button"))
                     }
 
                     VStack(alignment: .leading) {
                         Text("現在の状態")
                             .font(.headline)
-                            .foregroundStyle(Color("Text"))
+                            .foregroundStyle(Color("text"))
 
                         Text("歩行中")
                             .font(.title2)
-                            .foregroundStyle(Color("Text"))
+                            .foregroundStyle(Color("text"))
                             .bold()
                         
                     }
@@ -51,7 +51,7 @@ struct HomeView: View {
                         .padding(.horizontal, 14)
                         .padding(.vertical, 8)
                         .foregroundStyle(Color("White"))
-                        .background(Color("Button"))
+                        .background(Color("button"))
                         .cornerRadius(10)
                 }
                 .padding()
@@ -65,20 +65,20 @@ struct HomeView: View {
                         Text("加速度(m/s²)")
                             .font(.title3)
                             .bold()
-                            .foregroundStyle(Color("Text"))
+                            .foregroundStyle(Color("text"))
 
                         HStack() {
                             VStack(spacing: 16) {
                                 Text("X")
                                     .font(.title3)
                                     .bold()
-                                    .foregroundStyle(Color("Text"))
+                                    .foregroundStyle(Color("text"))
 
                                 // 数値
                                 Text("0.02")
                                     .font(.title)
                                     .bold()
-                                    .foregroundStyle(Color("Text"))
+                                    .foregroundStyle(Color("text"))
                             }
                             .padding(10)
                             .frame(width: 100, height: 100)
@@ -90,12 +90,12 @@ struct HomeView: View {
                                 Text("Y")
                                     .font(.title3)
                                     .bold()
-                                    .foregroundStyle(Color("Text"))
+                                    .foregroundStyle(Color("text"))
                                 // 数値
                                 Text("-9.81")
                                     .font(.title)
                                     .bold()
-                                    .foregroundStyle(Color("Text"))
+                                    .foregroundStyle(Color("text"))
                             }
                             .padding(10)
                             .frame(width: 100, height: 100)
@@ -108,12 +108,12 @@ struct HomeView: View {
                                 Text("Z")
                                     .font(.title3)
                                     .bold()
-                                    .foregroundStyle(Color("Text"))
+                                    .foregroundStyle(Color("text"))
                                 // 数値
                                 Text("0.15")
                                     .font(.title)
                                     .bold()
-                                    .foregroundStyle(Color("Text"))
+                                    .foregroundStyle(Color("text"))
                             }
                             .padding(10)
                             .frame(width: 100, height: 100)
@@ -123,18 +123,16 @@ struct HomeView: View {
 
                     }
 
-
-
                     Text("角度(度)")
                         .font(.title3)
                         .bold()
-                        .foregroundStyle(Color("Text"))
+                        .foregroundStyle(Color("text"))
                     VStack() {
                         HStack() {
                             Image(systemName: "arrowshape.left.arrowshape.right.fill")
                                 .resizable()
                                 .frame(width:28, height:16)
-                                .foregroundStyle(Color("Button"))
+                                .foregroundStyle(Color("button"))
                             Text("Pitch(ピッチ)")
                             Spacer()
                             Text("12.4°")
@@ -146,7 +144,7 @@ struct HomeView: View {
                             Image(systemName: "arrow.trianglehead.clockwise")
                                 .resizable()
                                 .frame(width:28, height:16)
-                                .foregroundStyle(Color("Button"))
+                                .foregroundStyle(Color("button"))
                             Text("Roll(ロール)")
                             Spacer()
                             Text("-2.1°")
@@ -159,7 +157,7 @@ struct HomeView: View {
                             Image(systemName: "location.circle")
                                 .resizable()
                                 .frame(width:28, height:16)
-                                .foregroundStyle(Color("Button"))
+                                .foregroundStyle(Color("button"))
                             Text("Yaw(ヨー)")
                             Spacer()
                             Text("184.5°")
@@ -173,7 +171,7 @@ struct HomeView: View {
                     Text("フィルタ設定")
                         .font(.title3)
                         .bold()
-                        .foregroundStyle(Color("Text"))
+                        .foregroundStyle(Color("text"))
                     Picker("フィルタ設定", selection: $selectedMode) {
 
                                     ForEach(filter, id: \.self) { mode in
@@ -195,7 +193,7 @@ struct HomeView: View {
                         .font(.headline)
                         .frame(maxWidth: .infinity)
                         .padding()
-                        .background(Color("Button"))
+                        .background(Color("button"))
                         .foregroundColor(.white)
                         .cornerRadius(15)
                 }
